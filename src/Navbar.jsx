@@ -7,7 +7,7 @@ const Container = styled("div")`
   background-color: #f9f9f9;
 `;
 const Navitem = styled("h2")`
-  font-size: 17px;
+  font-size: 17px;  
 `;
 const Logo = styled("img")`
   width: 50px;
@@ -17,7 +17,6 @@ function Navbar() {
   return (
     <Container>
       <Logo src={RentLogo} />
-      <Navitem to="/">About Us</Navitem>
       <Navitem to="/">Home</Navitem>
       <Navitem to="/">Arenda</Navitem>
       <Navitem to="/">Buy</Navitem>
