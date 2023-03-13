@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import RentLogo from "./home1.png";
+import Photo from "./img/home01.png";
+import Card from "./Conponents/Card2";
 
 const Container = styled("div")`
+  display: flex;
   margin: 4rem;
   color: black;
   font-size: 20px;
@@ -20,30 +22,34 @@ const Buttonn = styled("button")`
   color: black;
 `;
 const Logo = styled("img")`
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 `;
 
 function Section() {
   return (
     <Container>
-      <h1>
-        Discover Your
-        <br></br>
-        Living Dream
-        <br></br>
-        Property
-      </h1>
-      <P>
-        Working with us and build your dream property. We provide
-        <br></br>
-        confortable prices for our client so don't delay
-      </P>
       <div>
-        <Input placeholder="Search by location" />
-        <Buttonn>Search</Buttonn>
+        <h1>
+          Discover Your
+          <br></br>
+          Living Dream
+          <br></br>
+          Property
+        </h1>
+        <P>
+          Working with us and build your dream property. We provide
+          <br></br>
+          confortable prices for our client so don't delay
+        </P>
+        <div>
+          <Input placeholder="Search by location" />
+          <Buttonn>Search</Buttonn>
+        </div>
       </div>
-      
+      <div>
+        <img src={Photo} alt="" />
+      </div>
     </Container>
   );
 }
