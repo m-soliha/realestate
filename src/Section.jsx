@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Photo from "./img/home01.png";
+import Photo from "./img/дом.png";
 import Card from "./Conponents/Card2";
 
 const Container = styled("div")`
@@ -16,14 +16,15 @@ const P = styled("p")`
 `;
 const Input = styled("input")``;
 const Buttonn = styled("button")`
-  background-color: transparent;
+  background-color: #acccd7;
   border-radius: 5px;
   border: 1px solid black;
   color: black;
 `;
-const Logo = styled("img")`
-  width: 30px;
-  height: 30px;
+
+const div = styled("img")`
+  width: 50px;
+  height: 50px;
 `;
 
 function Section() {
