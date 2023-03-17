@@ -10,6 +10,8 @@ const Container = styled("div")`
   font-size: 20px;
   height: calc(100vh - 5rem);
   background-size: 100% 90%;
+  border: 1px solid black;
+  padding: 2rem;
 `;
 const P = styled("p")`
   color: grey;
@@ -22,9 +24,9 @@ const Buttonn = styled("button")`
   color: black;
 `;
 
-const div = styled("img")`
-  width: 50px;
-  height: 50px;
+const IMG = styled("img")`
+  width: 400px;
+  height: 380px;
 `;
 
 function Section() {
@@ -49,7 +51,7 @@ function Section() {
         </div>
       </div>
       <div>
-        <img src={Photo} alt="" />
+        <IMG src={Photo} alt="" />
       </div>
     </Container>
   );

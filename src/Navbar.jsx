@@ -22,10 +22,10 @@ function Navbar() {
     <Container>
       <Logo src={RentLogo} />
       <Link to="/section">Home</Link>
-      <Link to="/arenda">Arenda</Link>
-      <NavLink to="/">
+      <Link to="/arenda">Rent</Link>
+      <Link to="/buy">
         Buy
-      </NavLink>
+      </Link>
       <Link to="/contact">
         Contact
       </Link>
