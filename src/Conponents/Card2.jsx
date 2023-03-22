@@ -6,13 +6,14 @@ import {
   CardText,
   Button,
 } from "reactstrap";
- 
+
 
 function CardMain({ img, cost }) {
   return (
     <Card
       style={{
         width: "18rem",
+        border: "5px",
       }}
     >
       <img alt="Sample" src={img} />

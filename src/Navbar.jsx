@@ -7,12 +7,16 @@ const Container = styled("div")`
   display: flex;
   justify-content: space-evenly;
   background-color: #f9f9f9;
+  padding: 10px;
 `;
 const Navitem = styled("h2")`
   font-size: 17px;
 `;
 
-
+const NAVLINK = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
 const Logo = styled("img")`
   width: 50px;
   height: 50px;
@@ -21,17 +25,11 @@ function Navbar() {
   return (
     <Container>
       <Logo src={RentLogo} />
-      <Link to="/section">Home</Link>
-      <Link to="/arenda">Rent</Link>
-      <Link to="/buy">
-        Buy
-      </Link>
-      <Link to="/contact">
-        Contact
-      </Link>
-      <Link to="/login">
-        Log In
-      </Link>
+      <NAVLINK to="/">Home</NAVLINK>
+      <NAVLINK to="/arenda">Rent</NAVLINK>
+      <NAVLINK to="/buy">Buy</NAVLINK>
+      <NAVLINK to="/contact">Contact</NAVLINK>
+      <NAVLINK to="/login">Log In</NAVLINK>
     </Container>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Photo from "./img/дом.png";
+import Photo from "./img/foto1.png";
 import Card from "./Conponents/Card2";
+import Photo2 from "./img/fone.png";
 
 const Container = styled("div")`
   display: flex;
@@ -11,7 +12,7 @@ const Container = styled("div")`
   height: calc(100vh - 5rem);
   background-size: 100% 90%;
   border: 1px solid black;
-  padding: 2rem;
+  padding: 3rem;
 `;
 const P = styled("p")`
   color: grey;
@@ -25,14 +26,17 @@ const Buttonn = styled("button")`
 `;
 
 const IMG = styled("img")`
-  width: 400px;
-  height: 380px;
+  width: 32rem;
+  height: 35rem;
+  margin-top: -3rem;
+  margin-left: 5rem;
 `;
 
 function Section() {
   return (
     <Container>
       <div>
+ 
         <h1>
           Discover Your
           <br></br>
@@ -42,7 +46,6 @@ function Section() {
         </h1>
         <P>
           Working with us and build your dream property. We provide
-          <br></br>
           confortable prices for our client so don't delay
         </P>
         <div>
