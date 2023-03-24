@@ -2,6 +2,7 @@ import React from "react";
 import { provider, auth } from "./config";
 import styled from "styled-components";
 import { signInWithPopup } from "firebase/auth";
+import Css from "./index.css";
 
 
 const Login = ({ isAuth }) => {

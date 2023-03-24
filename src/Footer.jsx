@@ -11,8 +11,8 @@ import {
 
 export default function App() {
   return (
-    <MDBFooter bgColor='dark' className='text-center text-white text-lg-left'>
-      <MDBContainer className='p-4 pb-0'>
+    <MDBFooter style={{position:"static"}} bgColor='dark' className='text-center text-white text-lg-left'>
+      <MDBContainer style={{position:"static"}} className='p-4 pb-0'>
         <form action=''>
           <MDBRow className='d-flex justify-content-center'>
             <MDBCol size='auto' className='mb-4 mb-md-0'>

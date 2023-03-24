@@ -7,7 +7,7 @@ const Container = styled("div")`
   display: flex;
   justify-content: space-evenly;
   background-color: #f9f9f9;
-  padding: 10px;
+  padding: 1rem;
 `;
 const Navitem = styled("h2")`
   font-size: 17px;
@@ -18,8 +18,8 @@ const NAVLINK = styled(Link)`
   color: black;
 `;
 const Logo = styled("img")`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 `;
 function Navbar() {
   return (
