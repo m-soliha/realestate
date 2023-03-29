@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Photo from "./img/foto1.png";
 import Card from "./Conponents/Card2";
 import Photo2 from "./img/fone.png";
 import SectionHelper from "./SectionHelper";
+import SectionHelp from "./SectionHelp";
+import { getDocs, collection, doc } from "firebase/firestore";
+import { db } from "./config";
+
 const Container = styled("div")`
   display: flex;
   margin: 4rem;
@@ -24,16 +28,30 @@ const Buttonn = styled("button")`
 `;
 
 const IMG = styled("img")`
-  width: 32rem;
-  height: 35rem;
-  margin-top: -3rem;
+  width: 27rem;
+  height: 27rem;
+  margin-top: -1rem;
   margin-left: 5rem;
 `;
 
 function Section() {
+  const [info, setInfo] = useState([]);
+  const aboutMe = collection(db, "items");
+  useEffect(() => {
+    const getInfo = async () => {
+      const data = await getDocs(aboutMe);
+      console.log(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      console.log(123);
+    };
+    getInfo();
+  }, []);
+  console.log(123423);
+
   return (
     <Container>
-      <div style={{ display: "flex", border: "1px solid black" }}>
+      <div
+        style={{ display: "flex", border: "1px solid black", padding: "3rem" }}
+      >
         <div>
           <h1>
             Discover Your
@@ -56,6 +74,7 @@ function Section() {
         </div>
       </div>
       <SectionHelper />
+      <SectionHelp />
     </Container>
   );
 }

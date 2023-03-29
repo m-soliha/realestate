@@ -18,11 +18,11 @@ function CardMain({ img, cost }) {
     >
       <img alt="Sample" src={img} />
       <CardBody>
-        <CardTitle tag="h5">Card title</CardTitle>
+        <CardTitle tag="h5">Аренда дома <br></br>Цена</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">
-          {cost} сумм в месяц
+          {cost}
         </CardSubtitle>
-        <CardText>дом</CardText>
+        <CardText>В месяц</CardText>
         <Button>Button</Button>
       </CardBody>
     </Card>

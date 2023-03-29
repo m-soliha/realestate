@@ -13,6 +13,11 @@ const CardContainer = styled("div")`
   overflow-x: scroll;
   /* flex-direction: column; */
 `;
+
+const H1 = styled("h1")`
+  padding: 2rem;
+`;
+
 function SectionHelper() {
   const arr = [
     {
@@ -23,12 +28,12 @@ function SectionHelper() {
     {
       imgUrl:
         "https://cdn.esoft.digital/content/cluster/media/50/40f4de8ef0aa05b7c3f99c49d902b906a29f3c50.png",
-      title: "Все о работе",
+      title: "Все о работе в «Rent»",
     },
     {
       imgUrl:
         "https://cdn.esoft.digital/content/media/site/31/f2/0ba8c96925c182e135702637dd921773285f7671.jpg",
-      title: "Мобильные приложения",
+      title: "Мобильные приложения «Rent»",
     },
     {
       imgUrl:
@@ -38,7 +43,7 @@ function SectionHelper() {
     {
       imgUrl:
         "https://cdn.esoft.digital/content/media/site/1c/ea/bd/cfeacbe876d98de500a1bde2bbd442a0ea301b79.jpg",
-      title: "<Этажи> в цифрах",
+      title: "«Rent» в цифрах",
     },
     {
       imgUrl:
@@ -49,7 +54,7 @@ function SectionHelper() {
 
   return (
     <div>
-      <h1>Приемущества для вас</h1>
+      <H1>Приемущества для вас</H1>
       <CardContainer>
         {arr.map((d) => (
           <Card

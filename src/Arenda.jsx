@@ -1,13 +1,25 @@
 import CardMain from "./Conponents/Card2";
 import styled from "styled-components";
+import ReactHlsPlayer from "react-hls-player";
 
 const Container = styled("div")`
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+`;
+const CardContainer = styled("div")`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: 2px solid black;
   margin: 2rem;
   padding: 1rem;
 `;
+const VideoContainer = styled("div")`
+  display: flex;
+  background-color: light;
+  width: 100%;
+`;
+
 function Arenda() {
   const arr = [
     {
@@ -37,8 +49,8 @@ function Arenda() {
     },
     {
       imgUrl:
-        "https://cdn.esoft.digital/320240/cluster/photos/33/b1/d0f86d9eefdf7be1d509e7edead868bea6acb133.jpeg",
-      cost: 20000000,
+        "https://cdn.esoft.digital/320240/cluster/photos/f6/5b/7e859223df24a6e61ed6c316938a20dd3e545bf6.jpeg",
+      cost: 22000000,
     },
     {
       imgUrl:
@@ -52,15 +64,86 @@ function Arenda() {
     },
     {
       imgUrl:
-        "https://cdn.esoft.digital/320240/cluster/photos/f6/5b/7e859223df24a6e61ed6c316938a20dd3e545bf6.jpeg",
+        "https://cdn.esoft.digital/320240/cluster/photos/ef/45/904e856fb756dba687fcd8d0124f110fd16b45ef.jpeg",
+      cost: 28700000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/d1/11/775656518b451d35594d5baa247a58ac762711d1.jpeg",
+      cost: 28700000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/6a/c6/d26c112279190cb2c115f0b386b5841b16a1c66a.jpeg",
+      cost: 44000000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/a7/98/349111386c2cc5202305f040c644a750287298a7.jpeg",
       cost: 22000000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/b3/97/4966766b741f6183c3bacd5d76f82b4b6cc697b3.jpeg",
+      cost: 45400000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/4d/72/f04f39f62838c3b8c0a161a368bb491c03e6724d.jpeg",
+      cost: 16600000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/14/e7/3dc6cac3423c7e29e0cb331fec3e5fda0329e714.jpeg",
+      cost: 56000000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/3e/81/87140127744936a4ae26544e57c2022d937a813e.jpeg",
+      cost: 21700000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/8b/63/cfd4c7b98d2813afef45b782098dcb3b758c638b.jpeg",
+      cost: 38500000,
+    },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/320240/cluster/photos/09/e7/907f09bdd9e234b09605e4f49661fa76c184e709.jpeg",
+      cost: 56000000,
+    },
+  ];
+  const videoData = [
+    {
+      link: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    },
+    {
+      link: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    },
+    {
+      link: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
     },
   ];
   return (
     <Container>
-      {arr.map((d) => (
-        <CardMain img={d.imgUrl} cost={d.cost} />
-      ))}
+      <CardContainer>
+        {arr.map((d) => (
+          <CardMain img={d.imgUrl} cost={d.cost} />
+        ))}
+      </CardContainer>
+      <VideoContainer>
+        {videoData.map((d) => (
+          <div style={{ display: "flex", padding: "1rem", width: "500px" }}>
+            <ReactHlsPlayer
+              src={d.link}
+              autoPlay={false}
+              controls={true}
+              width="100%"
+              height="300px"
+            />
+          </div>
+        ))}
+      </VideoContainer>
     </Container>
   );
 }
