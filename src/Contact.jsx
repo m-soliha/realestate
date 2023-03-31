@@ -1,48 +1,73 @@
-import React from 'react'
+import React from "reactstrap";
 import styled from "styled-components";
+import { IoIosCall, } from "react-icons/io";
+import { IoChatbubblesSharp,IoFolderOpenSharp, } from "react-icons/io5";
+// import { Folder } from "react-feather";
+import Photo from "./img/foto1.png";
+import Photo2 from "./img/foto02.png";
+import Photo3 from "./img/foto03.png";
 
-const ContactForm = () => {
-  const [formStatus, setFormStatus] = React.useState('Send')
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('Submitting...')
-    const { name, email, message } = e.target.elements
-    let conFom = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    }
-    console.log(conFom)
-  }
+const Div = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+`;
+
+const Box = styled("div")`
+  width: 350px;
+`;
+
+const Icon = styled("i")`
+  color: orange;
+  font-size: 40px;
+`;
+
+const UserName = styled("p")``;
+const Location = styled("p")``;
+const Worktime = styled("p")``;
+const TellNum = styled("a")``;
+
+const arr = [
+  {
+    icon: <IoIosCall />,
+    name: "By Phone",
+    tellNumber: "+998(71)245-11-11",
+    location: "Uzbekistan",
+    workTime: "Manday to Friday, 9am to 4pm",
+  },
+  {
+    icon: <IoChatbubblesSharp />,
+    name: "Start a new case",
+    tellNumber: "+998(90)957-55-05",
+    location: "Uzbekistan",
+    workTime: "Just send us your questions or concerns by starting a new case and we will give you the help you need",
+  },
+  {
+    icon: <IoFolderOpenSharp />,
+    name: "Live Chat",
+    tellNumber: "+998(90)133-55-05",
+    location: "Uzbekistan",
+    workTime: "Chat with a member of our in-house team",
+  },
+];
+
+function Contact() {
   return (
-    <div className="container mt-5">
-      <h2 className="mb-3">Contact Us</h2>
-      <h6>(90) 133-55-05</h6>
-      <h6>(90) 957-55-05</h6>
-      <form onSubmit={onSubmit}>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="name">
-            Name
-          </label>
-          <input className="form-control" type="text" id="name" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input className="form-control" type="email" id="email" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="message">
-            Message
-          </label>
-          <textarea className="form-control" id="message" required />
-        </div>
-        <button className="btn btn-primary" type="submit">
-          {formStatus}
-        </button>
-      </form>
-    </div>
-  )
+    <Div>
+      {arr.map((data, index) => (
+        <Box key={index}>
+          <Icon>{data.icon}</Icon>
+          <UserName>{data.name}</UserName>
+          <Location>{data.location}</Location>
+          <Worktime>{data.workTime}</Worktime>
+          <TellNum href={`tel:${data.tellNumber}`}>{data.tellNumber}</TellNum>
+        </Box>
+      ))}
+    </Div>
+  );
 }
-export default ContactForm;
+
+export default Contact;

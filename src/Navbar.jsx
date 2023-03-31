@@ -3,6 +3,7 @@ import styled from "styled-components";
 import RentLogo from "./Rent.png";
 import { Nav, NavItem, NavLink, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+
 const Container = styled("div")`
   display: flex;
   justify-content: space-evenly;
@@ -29,7 +30,10 @@ function Navbar() {
       <NAVLINK to="/arenda">Rent</NAVLINK>
       <NAVLINK to="/buy">Buy</NAVLINK>
       <NAVLINK to="/contact">Contact</NAVLINK>
-      <NAVLINK to="/login">Log In</NAVLINK>
+      <NAVLINK to="/login">
+        Log In
+        
+      </NAVLINK>
     </Container>
   );
 }
