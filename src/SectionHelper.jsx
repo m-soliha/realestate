@@ -1,17 +1,21 @@
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
-} from "reactstrap";
 import styled from "styled-components";
 
 const CardContainer = styled("div")`
   display: flex;
   overflow-x: scroll;
   /* flex-direction: column; */
+`;
+
+const Card = styled("div")`
+  width: 199px;
+`;
+
+const CardBody = styled("div")`
+  width: 199px;
+`;
+
+const CardTitle = styled("div")`
+  width: 199px;
 `;
 
 const H1 = styled("h1")`
@@ -57,12 +61,7 @@ function SectionHelper() {
       <H1>Приемущества для вас</H1>
       <CardContainer>
         {arr.map((d) => (
-          <Card
-            style={{
-              width: "18rem",
-              margin: "1rem",
-            }}
-          >
+          <Card>
             <img alt="Sample" src={d.imgUrl} />
             <CardBody>
               <CardTitle tag="h5">{d.title}</CardTitle>

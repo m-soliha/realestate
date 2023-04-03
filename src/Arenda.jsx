@@ -25,7 +25,7 @@ function Arenda() {
     {
       imgUrl:
         "https://cdn.esoft.digital/320240/cluster/photos/b8/3f/b47b860ae915ac4d8d6c5168b1399c1bcae93fb8.jpeg",
-      cost: 25300000,
+      cost: 25300010,
     },
     {
       imgUrl:
