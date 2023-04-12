@@ -2,20 +2,38 @@ import styled from "styled-components";
 
 const CardContainer = styled("div")`
   display: flex;
-  overflow-x: scroll;
+  padding: 10px;
+  display: flex;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  width: 100%;
+  align-items: center;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  gap: 10px;
   /* flex-direction: column; */
-`;
+  `;
 
 const Card = styled("div")`
-  width: 199px;
+padding: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #ececec;
+  :hover{
+    transform: scale(104%, 104%);
+  }
+  transition: all 0.3s;
 `;
 
-const CardBody = styled("div")`
-  width: 199px;
-`;
+
 
 const CardTitle = styled("div")`
-  width: 199px;
+  width: 250px;
 `;
 
 const H1 = styled("h1")`
@@ -51,9 +69,15 @@ function SectionHelper() {
     },
     {
       imgUrl:
-        "https://cdn.esoft.digital/content/media/site/c8/b5/8f/4f10bccc9f6efcbdfd0e6d594674e6d381127d68.jpg",
-      title: "Купи франшизу №1 в сфере недвижимости",
+        "https://cdn.esoft.digital/content/media/site/1c/ea/bd/cfeacbe876d98de500a1bde2bbd442a0ea301b79.jpg",
+      title: "«Rent» в цифрах",
     },
+    {
+      imgUrl:
+        "https://cdn.esoft.digital/content/media/site/1c/ea/bd/cfeacbe876d98de500a1bde2bbd442a0ea301b79.jpg",
+      title: "«Rent» в цифрах",
+    },
+
   ];
 
   return (
@@ -62,10 +86,8 @@ function SectionHelper() {
       <CardContainer>
         {arr.map((d) => (
           <Card>
-            <img alt="Sample" src={d.imgUrl} />
-            <CardBody>
+            <img alt="Sample" src={d.imgUrl} style={{ height: "200px",width:"150px" ,borderRadius:"8px"}} />
               <CardTitle tag="h5">{d.title}</CardTitle>
-            </CardBody>
           </Card>
         ))}
       </CardContainer>

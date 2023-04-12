@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Photo from "./img/foto1.png";
+import Photo from "./img/реакт.png";
 import Card from "./Conponents/Card2";
 import Photo2 from "./img/fone.png";
 import SectionHelper from "./SectionHelper";

@@ -14,6 +14,7 @@ const Div = styled("div")`
   height: 100%;
   width: 100%;
   background-color: rgb(237, 237, 237);
+  padding: 2rem;
 `;
 
 const Box = styled("div")`

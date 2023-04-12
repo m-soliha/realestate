@@ -9,6 +9,7 @@ import {
   MDBInput,
   MDBBtn,
 } from "mdb-react-ui-kit";
+import SectionMap from "./Conponents/SectionMap";
 
 export default function App() {
   return (
@@ -43,7 +44,7 @@ export default function App() {
           </MDBRow>
         </form>
       </MDBContainer>
-
+      <SectionMap />
       <div
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
