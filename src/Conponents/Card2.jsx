@@ -13,7 +13,10 @@ function CardMain({ img, cost }) {
     <Card
       style={{
         width: "18rem",
-        border: "5px",
+        margin: "2rem",
+        borderRadius: "1rem",
+        backgroundColor:"rgb(242,242,237)",
+        border: "2px solid black",
       }}
     >
       <img alt="Sample" src={img} />

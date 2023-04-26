@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Photo from "./img/реакт.png";
+import Photo from "./img/react.png";
 import Card from "./Conponents/Card2";
 import Photo2 from "./img/fone.png";
 import SectionHelper from "./SectionHelper";
@@ -25,6 +25,7 @@ const Buttonn = styled("button")`
   background-color: #acccd7;
   border-radius: 5px;
   color: black;
+  margin: 15px;
 `;
 
 const IMG = styled("img")`

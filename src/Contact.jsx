@@ -1,8 +1,7 @@
 import React from "reactstrap";
 import styled from "styled-components";
-import { IoIosCall, } from "react-icons/io";
-import { IoChatbubblesSharp,IoFolderOpenSharp, } from "react-icons/io5";
-// import { Folder } from "react-feather";
+import { IoIosCall } from "react-icons/io";
+import { IoChatbubblesSharp, IoFolderOpenSharp } from "react-icons/io5";
 import Photo from "./img/foto1.png";
 import Photo2 from "./img/foto02.png";
 import Photo3 from "./img/foto03.png";
@@ -13,8 +12,8 @@ const Div = styled("div")`
   justify-content: space-around;
   height: 100%;
   width: 100%;
-  background-color: rgb(237, 237, 237);
-  padding: 2rem;
+  background-color: F2F1EF;
+  padding: 5rem;
 `;
 
 const Box = styled("div")`
@@ -44,7 +43,8 @@ const arr = [
     name: "Start a new case",
     tellNumber: "+998(90)957-55-05",
     location: "Uzbekistan",
-    workTime: "Just send us your questions or concerns by starting a new case and we will give you the help you need",
+    workTime:
+      "Just send us your questions or concerns by starting a new case and we will give you the help you need",
   },
   {
     icon: <IoFolderOpenSharp />,

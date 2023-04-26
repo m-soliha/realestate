@@ -69,13 +69,13 @@ function SectionHelper() {
     },
     {
       imgUrl:
-        "https://cdn.esoft.digital/content/media/site/1c/ea/bd/cfeacbe876d98de500a1bde2bbd442a0ea301b79.jpg",
-      title: "«Rent» в цифрах",
+        "https://cdn.esoft.digital/content/media/site/a3/7e/c4/92f91780d4a2c5349d3b68f5eac887334018be9d.png",
+      title: "Мы ищем именно вас",
     },
     {
       imgUrl:
-        "https://cdn.esoft.digital/content/media/site/1c/ea/bd/cfeacbe876d98de500a1bde2bbd442a0ea301b79.jpg",
-      title: "«Rent» в цифрах",
+        "https://cdn.esoft.digital/content/media/site/c8/b5/8f/4f10bccc9f6efcbdfd0e6d594674e6d381127d68.jpg",
+      title: "Купи франшизу №1 в сфере недвижимости",
     },
 
   ];

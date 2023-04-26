@@ -5,6 +5,7 @@ import { signInWithPopup } from "firebase/auth";
 import "./index.css";
 import GoogleLogo from "./img/google-logo.png";
 import { CardTitle, CardSubtitle, Input, Container } from "reactstrap";
+import { LogIn } from "react-feather";
 const IMG = styled("img")`
   width: 2rem;
   height: 2rem;
@@ -13,8 +14,7 @@ const IMG = styled("img")`
 const Button = styled("button")`
   width: 20rem;
   height: 3rem;
-  
-  
+
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
   padding: 5px 16px 12px 42px;
@@ -39,13 +39,24 @@ const SignIn = ({ isAuth }) => {
     });
   };
   return (
-    <Container style={{ width: "20rem", height: "50rem" }}>
+    <Container
+      style={{
+        width: "23rem",
+        height: "28rem",
+        backgroundColor: "rgb(242,242,237)",
+        padding: "1rem",
+        borderRadius: "1rem",
+        margin: "5rem",
+        marginLeft: "28rem",
+        border: "2px solid black",
+      }}
+    >
       <div className="SignIn">
         <div className="SignIn-left">
           <img src="" alt="" />
         </div>
         <div className="SignIn-right">
-          <h1>Sigh in to Rent</h1>
+          <h1>Sign in to Rent</h1>
           <CardTitle style={{ marginLeft: "8rem", display: "flex" }}>
             Rent
           </CardTitle>
